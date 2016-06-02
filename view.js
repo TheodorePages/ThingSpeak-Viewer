@@ -57,7 +57,7 @@ println(address);
 }
 
 function datapass(newData)
-{var fieldLabel= "\"field"+fieldNum+"\"";
+{var fieldLabel= "\\\"field"+fieldNum+"\\\"";
 println(newData);
 var datArray=splitTokens(JSON.stringify(newData),",");
 println(datArray[0]+"test");
@@ -65,12 +65,14 @@ println(datArray[0]+"test");
 for(var i=0; i<datArray.length; i++)
   {var current=splitTokens(datArray[i],":");
   println(current[0]);
-  if(current[0]==fieldLabel){println("Found It"+current[0]);}
+  if(current[0]==fieldLabel)
+    {println("Found It"+current[0]);
+    println(current[1]);
+    var vals=splitTokens(current[1],"\"");
+    currentVal=vals[0];  
+    }
+  else{currentVal=0;}
   }
-println(current[1]);
-var vals=splitTokens(current[1],"\"");
-currentVal=vals[0];
-//maxValue=newData.getColumn(1)[3];
 }
 
 
