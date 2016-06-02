@@ -57,7 +57,7 @@ println(address);
 }
 
 function datapass(newData)
-{var fieldLabel= "\\\"field"+fieldNum+"\\\"";
+{var fieldLabel= "\"field"+fieldNum+"\"";
 println(newData);
 var datArray=splitTokens(JSON.stringify(newData),",");
 println(datArray[0]+"test");
@@ -73,6 +73,8 @@ for(var i=0; i<datArray.length; i++)
     }
   else{currentVal=0;}
   }
+
+//maxValue=newData.getColumn(1)[3];
 }
 
 
