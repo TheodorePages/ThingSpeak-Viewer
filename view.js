@@ -16,7 +16,7 @@ frameRate(100);
 thisURL=window.location.href;
 var thisURLs=split(thisURL,"?");
 var reads=splitTokens(thisURLs[1],"=");
-apiReadKey=reads[1];
+channelID=reads[1];
 var fields=splitTokens(thisURLs[2],"=");
 fieldNum=fields[1];
 }
